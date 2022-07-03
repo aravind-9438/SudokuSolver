@@ -3,9 +3,10 @@ import numpy as np
 from utils import *
 import sudukoSolver
 import streamlit as st
+from tensorflow.keras.models import load_model
 
 width,height = 450,450
-model = intializemodel()
+model = load_model("MyModel.h5")
 
 global grid
 
