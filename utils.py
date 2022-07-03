@@ -1,6 +1,6 @@
 import cv2
 import numpy as np 
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 
  
 
@@ -47,9 +47,9 @@ def splitBoxes(img):
             boxes.append(box)
     return boxes
 
-def intializemodel():
-    model = load_model("MyModel.h5")
-    return model
+# def intializemodel():
+#     model = load_model("MyModel.h5")
+#     return model
 
 def getPrediction(boxes,model):
     result = []
