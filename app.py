@@ -24,8 +24,14 @@ if(option=='Take a picture'):
 		img = np.array(img) 
 		res = main.solve(img)
 		if(res):
-			for i in res:
-				st.image(i)
+			for i in range(0,6,3):
+				col1, col2, col3  = st.columns(3)
+				with col1:
+					st.image(res[i])
+				with col2:
+					st.image(res[i+1])
+				with col3:
+					st.image(res[i+2])
 		else:
 			st.write("No Sudoku Found")
 elif(option=="Upload a file"):
@@ -35,8 +41,14 @@ elif(option=="Upload a file"):
 		img = np.array(img) 
 		res = main.solve(img)
 		if(res):
-			for i in res:
-				st.image(i)
+			for i in range(0,6,3):
+				col1, col2, col3 = st.columns(3)
+				with col1:
+					st.image(res[i])
+				with col2:
+					st.image(res[i+1])
+				with col3:
+					st.image(res[i+2])
 		else:
 			st.write("No Sudoku Found")
  
